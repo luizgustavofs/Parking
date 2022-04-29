@@ -1,3 +1,41 @@
 {
-  "extends": "next/core-web-vitals"
+  "extends": ["next/core-web-vitals"],
+  "plugins": ["prettier"],
+  "rules": {
+    "prettier/prettier": "error",
+    "no-unused-vars":"error"
+  },
+  "overrides": [
+    {
+      "files": ["*.ts", "*.tsx"],
+      "rules": {
+        "react/self-closing-comp": ["error", {
+          "component": true,
+          "html": true
+        }],
+        "import/no-duplicates": ["error", {"considerQueryString": true}],
+        "no-shadow": "off",
+        "no-undef": "off",
+        "curly": "off",
+        "comma-dangle": [2, "always-multiline"],
+        "import/order":[
+          "error",
+          {
+            "groups": ["builtin", "external", "internal"],
+            "pathGroups":[{
+              "pattern": "react",
+              "group": "external",
+              "position": "before"
+            }],
+            "pathGroupsExcludedImportTypes": ["react"],
+            "newlines-between": "always",
+            "alphabetize": {
+              "order": "asc",
+              "caseInsensitive":true
+            }
+          }
+        ]
+      }
+    }
+  ]
 }
