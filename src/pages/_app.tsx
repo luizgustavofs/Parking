@@ -1,8 +1,14 @@
-import '../styles/globals.css';
 import type { AppProps } from 'next/app';
+import '../styles/globals.css';
+
+import { ProjectThemeProvider } from '../theme';
 
 function MyApp({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />;
+  return (
+    <ProjectThemeProvider>
+      <Component {...pageProps} />
+    </ProjectThemeProvider>
+  );
 }
 
 export default MyApp;
