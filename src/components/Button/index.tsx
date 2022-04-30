@@ -12,11 +12,13 @@ const Button: React.FC<ButtonProps> = ({
   secondary,
   withOutBG,
   disabled,
+  onClick,
 }) => {
   const { colors } = useTheme();
 
   return (
     <Container
+      onClick={onClick}
       withOutBG={withOutBG}
       disabled={disabled}
       primary={primary}

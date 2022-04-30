@@ -14,5 +14,6 @@ export interface getStyleProps extends ButtonBackgroundProps {
 
 export interface ButtonProps extends ButtonBackgroundProps {
   children: string;
+  onClick?: () => void;
 }
 ``;
