@@ -1,6 +1,17 @@
 {
   "translation": {
-    "greeting": "Olá, como vai?",
-    "bem vindo": "bem vindo"
+    "ENTRY": {
+      "CONFIRM": "CONFIRMAR ENTRADA",
+      "HISTORIC": "VER HISTÓRICO",
+      "PAYMENT": "PAGAMENTO",
+      "EXIT": "SAIR",
+      "RETURN": "VOLTAR",
+      "REGISTERING": "REGISTRANDO...",
+      "REGISTERED": "REGISTRADO!",
+      "INPUT": {
+        "LABEL": "Número da placa:",
+        "PLACEHOLDER": "AAA-0000"
+      }
+    }
   }
 }

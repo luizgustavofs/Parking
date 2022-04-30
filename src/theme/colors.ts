@@ -8,5 +8,6 @@ export const colors = {
   neutral: {
     _00: '#ffffff',
     _70: '#DADADA',
+    _80: '#9B9B9B',
   },
 };

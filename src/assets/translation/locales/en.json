@@ -1,6 +1,17 @@
 {
   "translation": {
-    "greeting": "Hello, how are you?",
-    "bem vindo": "welcome"
+    "ENTRY": {
+      "CONFIRM": "CONFIRM",
+      "HISTORIC": "VIEW HISTORY",
+      "PAYMENT": "PAYMENT",
+      "EXIT": "EXIT",
+      "RETURN": "RETURN",
+      "REGISTERING": "REGISTERING...",
+      "REGISTERED": "REGISTERED!",
+      "INPUT": {
+        "LABEL": "License plate:",
+        "PLACEHOLDER": "AAA-0000"
+      }
+    }
   }
 }
