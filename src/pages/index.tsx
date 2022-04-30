@@ -7,7 +7,7 @@ const Home: NextPage = () => {
 
   return (
     <div>
-      <h1>{t('bem vindo')}</h1>
+      <h2 className="bold">{t('bem vindo')}</h2>
     </div>
   );
 };

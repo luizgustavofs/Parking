@@ -3,11 +3,13 @@ import { ReactNode } from 'react';
 import { ThemeProvider } from 'styled-components';
 
 import { colors } from './colors';
+import { fontSizes } from './fontSizes';
 import { spaces } from './spaces';
 
 export const theme = {
   colors,
   spaces,
+  fontSizes,
 };
 
 const ProjectThemeProvider: React.FC<{ children: ReactNode }> = ({
