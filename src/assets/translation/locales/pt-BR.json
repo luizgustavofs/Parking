@@ -12,6 +12,12 @@
         "LABEL": "Número da placa:",
         "PLACEHOLDER": "AAA-0000"
       }
+    },
+    "LOGIN": {
+      "INPUT": {
+        "USERNAME": "Usuário"
+      },
+      "BUTTON": "Entrar"
     }
   }
 }

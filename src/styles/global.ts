@@ -11,7 +11,7 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   body, input, textarea, select, button, text {
-    font: 400 1rem "Open Sans", sans-serif;
+    font: 500 1rem 'Open Sans', 'Georgia', serif;
     overflow: hidden;
     display: flex;
   }

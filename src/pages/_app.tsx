@@ -1,4 +1,5 @@
 // import '../styles/globals.css';
+import '../assets/translation/i18next';
 import type { AppProps } from 'next/app';
 import { Provider } from 'react-redux';
 
