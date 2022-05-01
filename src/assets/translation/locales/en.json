@@ -18,6 +18,12 @@
         "USERNAME": "Username"
       },
       "BUTTON": "Login"
-    }
+    },
+    "MODAL": {
+      "ENTRY": "Entry",
+      "EXIT": "Exit",
+      "LANGUAGE": "Change Language"
+    },
+    "LANGUAGE": "English"
   }
 }
