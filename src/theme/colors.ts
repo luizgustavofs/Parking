@@ -4,7 +4,8 @@ export const colors = {
   secondary: '#F2F2F2',
   tertiary: '#28DD91',
   quaternary: '#A769B2',
-  accent: '#FF0068',
+  error: '#FF0068',
+  baseColor: '#FFFBE6',
   neutral: {
     _00: '#ffffff',
     _70: '#DADADA',
