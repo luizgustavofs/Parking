@@ -16,17 +16,15 @@ const Input: React.FC<InputProps> = ({
   const { colors } = useTheme();
 
   return (
-    <>
-      <Container color={color || colors.neutral._80}>
-        <h3>{label}</h3>
-        <InputMask
-          mask="aaa-9*99"
-          placeholder={placeholderText}
-          onChange={onChange}
-          value={value}
-        />
-      </Container>
-    </>
+    <Container color={color || colors.neutral._80}>
+      <h3>{label}</h3>
+      <InputMask
+        mask="aaa-9*99"
+        placeholder={placeholderText}
+        onChange={e => onChange(e?.target?.value?.toUpperCase() || '')}
+        value={value}
+      />
+    </Container>
   );
 };
 

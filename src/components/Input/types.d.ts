@@ -5,6 +5,6 @@ export interface InputPlaceholderProps {
 export interface InputProps extends InputPlaceholderProps {
   placeholderText: string;
   label: string;
-  onChange?: React.ChangeEventHandler<HTMLInputElement>;
-  value?: string;
+  onChange: (value: string) => void;
+  value: string;
 }

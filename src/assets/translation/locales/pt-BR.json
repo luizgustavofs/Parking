@@ -24,6 +24,10 @@
       "EXIT": "Saída",
       "LANGUAGE": "Mudar Idioma"
     },
-    "LANGUAGE": "Português"
+    "LANGUAGE": "Português",
+    "TAB": {
+      "ENTRY": "Entrar",
+      "EXIT": "Sair"
+    }
   }
 }

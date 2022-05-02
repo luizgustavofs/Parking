@@ -1,7 +1,7 @@
 {
   "translation": {
     "ENTRY": {
-      "CONFIRM": "CONFIRM",
+      "CONFIRM": "CONFIRM ENTRY",
       "HISTORIC": "VIEW HISTORY",
       "PAYMENT": "PAYMENT",
       "EXIT": "EXIT",
@@ -24,6 +24,10 @@
       "EXIT": "Exit",
       "LANGUAGE": "Change Language"
     },
-    "LANGUAGE": "English"
+    "LANGUAGE": "English",
+    "TAB": {
+      "ENTRY": "Entry",
+      "EXIT": "Exit"
+    }
   }
 }

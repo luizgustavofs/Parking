@@ -8,6 +8,7 @@ export const colors = {
   baseColor: '#FFFBE6',
   neutral: {
     _00: '#ffffff',
+    _50: '#F2F2F2',
     _70: '#DADADA',
     _80: '#9B9B9B',
   },
