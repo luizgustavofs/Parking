@@ -9,8 +9,11 @@ export const Container = styled.div`
 
   padding: 41px 8px;
 
-  @media (min-width: 1024px) {
+  div {
     display: flex;
+  }
+
+  @media (min-width: 1024px) {
     align-items: center;
     justify-content: center;
     padding: 0;
@@ -18,20 +21,6 @@ export const Container = styled.div`
 `;
 
 export const TabContainer = styled.div`
-  display: flex;
-
-  @media (min-width: 1024px) {
-    width: 400px;
-  }
-`;
-
-export const RegisterContent = styled.div`
-  display: flex;
-  background-color: white;
-  padding: 36px 16px 64px 16px;
-
-  flex-direction: column;
-
   @media (min-width: 1024px) {
     width: 400px;
   }

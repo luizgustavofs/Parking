@@ -1,67 +1,54 @@
-import React, { useState } from 'react';
+/* eslint-disable @next/next/no-img-element */
+/* eslint-disable jsx-a11y/alt-text */
+import 'react-toastify/dist/ReactToastify.css';
+
+import React from 'react';
 
 import { useTranslation } from 'react-i18next';
 
-import Button from '../../components/Button';
-import Header from '../../components/Header';
-import Input from '../../components/Input';
+import Entry from '../../components/Entry';
+import Exit from '../../components/Exit';
 import Tab from '../../components/Tab';
-import { theme } from '../../theme';
-import { Container, TabContainer, RegisterContent } from './styles';
+import {
+  changeCurrentSection,
+  changePlate,
+} from '../../redux/reducers/session';
+import { useAppDispatch, useAppSelector } from '../../redux/store';
+import { Container, TabContainer } from './styles';
 
 const RegisterScreen: React.FC = () => {
-  const [currentSection, setCurrentSection] = useState('entry');
-  const [plate, setPlate] = useState('');
+  const { plate, currentSection } = useAppSelector(state => state.session);
+  const dispatch = useAppDispatch();
 
   const { t } = useTranslation();
+
   return (
     <>
-      <Header />
       <Container>
         <TabContainer>
           <Tab
             label={t('TAB.ENTRY')}
             active={currentSection === 'entry'}
-            onClick={() => setCurrentSection('entry')}
+            onClick={() => dispatch(changeCurrentSection('entry'))}
           />
           <Tab
             label={t('TAB.EXIT')}
             active={currentSection === 'exit'}
-            onClick={() => setCurrentSection('exit')}
+            onClick={() => dispatch(changeCurrentSection('exit'))}
           />
         </TabContainer>
-        <RegisterContent>
-          <Input
-            label={t('ENTRY.INPUT.LABEL')}
-            placeholderText={t('ENTRY.INPUT.PLACEHOLDER')}
-            value={plate}
-            onChange={value => setPlate(value)}
+        {currentSection === 'entry' && (
+          <Entry
+            plate={plate}
+            setPlate={(newPlate: string) => dispatch(changePlate(newPlate))}
           />
-          {currentSection === 'entry' && (
-            <Button primary disabled={plate === '' || plate.includes('_')}>
-              {t('ENTRY.CONFIRM')}
-            </Button>
-          )}
-          {currentSection === 'exit' && (
-            <>
-              <Button
-                primary
-                disabled={plate === '' || plate.includes('_')}
-                color={theme.colors.quaternary}>
-                {t('ENTRY.PAYMENT')}
-              </Button>
-              <Button
-                secondary
-                disabled={plate === '' || plate.includes('_')}
-                color={theme.colors.quaternary}>
-                {t('ENTRY.EXIT')}
-              </Button>
-              <Button withOutBG color={theme.colors.primary}>
-                {t('ENTRY.HISTORIC')}
-              </Button>
-            </>
-          )}
-        </RegisterContent>
+        )}
+        {currentSection === 'exit' && (
+          <Exit
+            plate={plate}
+            setPlate={(newPlate: string) => dispatch(changePlate(newPlate))}
+          />
+        )}
       </Container>
     </>
   );
