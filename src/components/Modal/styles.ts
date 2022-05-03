@@ -8,6 +8,7 @@ export const ModalContent = styled.div`
   left: 0;
   padding: 5px 10px;
   flex-direction: column;
+  z-index: 2;
 
   div {
     color: #fff;
