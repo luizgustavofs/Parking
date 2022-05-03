@@ -1,10 +1,12 @@
 {
   "extends": ["next/core-web-vitals"],
-  "plugins": ["prettier"],
+  "plugins": ["prettier","@typescript-eslint"],
   "rules": {
     "prettier/prettier": "error",
-    "no-unused-vars":"error"
+    "no-unused-vars": "off",
+    "@typescript-eslint/no-unused-vars": ["error"]
   },
+  "parser": "@typescript-eslint/parser",
   "overrides": [
     {
       "files": ["*.ts", "*.tsx"],
