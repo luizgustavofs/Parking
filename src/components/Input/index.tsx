@@ -19,7 +19,8 @@ const Input: React.FC<InputProps> = ({
     <Container color={color || colors.neutral._80}>
       <h3>{label}</h3>
       <InputMask
-        mask="aaa-9*99"
+        color={color}
+        mask="aaa-9999"
         placeholder={placeholderText}
         onChange={e => onChange(e?.target?.value?.toUpperCase() || '')}
         value={value}
