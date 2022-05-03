@@ -5,7 +5,7 @@ import { HeaderProps } from './types';
 export const Container = styled.div<HeaderProps>`
   display: flex;
   height: 3.75rem;
-  width: 100%;
+  width: 100vw;
   border: solid 1px ${({ theme }) => theme.colors.primary};
   background: ${({ theme }) => theme.colors.primary};
   padding: 5px 10px;
