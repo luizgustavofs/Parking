@@ -14,10 +14,17 @@ export const Container = styled.div<HeaderProps>`
   img {
     height: 3rem;
     width: 3rem;
+    align-self: center;
+    z-index: 2;
   }
 
   span {
     cursor: pointer;
+  }
+
+  h3 {
+    color: #fff;
+    margin-right: 15px;
   }
 
   > div {
@@ -39,6 +46,19 @@ export const Container = styled.div<HeaderProps>`
   @media (min-width: 1024px) {
     .web {
       display: flex;
+
+      .user {
+        position: absolute;
+        right: 0;
+        display: flex;
+        align-items: center;
+
+        img:last-child {
+          width: 25px;
+          height: 25px;
+          margin-right: 50px;
+        }
+      }
     }
 
     .menuMobile {
