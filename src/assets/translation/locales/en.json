@@ -27,7 +27,8 @@
       "INPUT": {
         "USERNAME": "Username"
       },
-      "BUTTON": "Login"
+      "BUTTON": "Login",
+      "ERROR": "You need to add a username."
     },
     "MODAL": {
       "ENTRY": "Entry",
@@ -73,6 +74,15 @@
     },
     "TEMPO ATUAL": "CURRENT TIME",
     "PAGAMENTO": "PAYMENT",
-    "STATUS": "STATUS"
-  }
+    "STATUS": "STATUS",
+    "HEADER": {
+      "USER": "User: ",
+      "LOGOUT-TITLE": "LOGOUT",
+      "LOGOU-LABEL": "Are you sure you want to quit?",
+      "CONFIRM-LOGOUT-YES": "Yes",
+      "CONFIRM-LOGOUT-NO": "No",
+      "LOG-IN": "You would need to add a user to sign in."
+    }
+  },
+  "Usuario:": "User: "
 }

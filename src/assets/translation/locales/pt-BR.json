@@ -28,7 +28,8 @@
       "INPUT": {
         "USERNAME": "Usuário"
       },
-      "BUTTON": "Entrar"
+      "BUTTON": "Entrar",
+      "ERROR": "Você precisar adicionar um nome de usuario."
     },
     "MODAL": {
       "ENTRY": "Entrada",
@@ -78,6 +79,15 @@
     },
     "TEMPO ATUAL": "TEMPO ATUAL",
     "PAGAMENTO": "PAGAMENTO",
-    "STATUS": "STATUS"
-  }
+    "STATUS": "STATUS",
+    "HEADER": {
+      "USER": "Usuário: ",
+      "LOGOUT-TITLE": "SAIR",
+      "LOGOU-LABEL": "Você tem certeza que deseja sair?",
+      "CONFIRM-LOGOUT-YES": "Sim",
+      "CONFIRM-LOGOUT-NO": "Não",
+      "LOG-IN": "Você precisaria adicionar um usuário para entrar."
+    }
+  },
+  "Usuario:": "Usuario: "
 }
