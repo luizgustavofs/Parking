@@ -183,7 +183,11 @@ const Exit: React.FC<ExitProps> = ({ plate, setPlate }) => {
         onClick={checkCanExit}>
         {t('ENTRY.EXIT')}
       </Button>
-      <Button withOutBG color={colors.primary} onClick={handleHistoric}>
+      <Button
+        withOutBG
+        disabled={plate === '' || plate.includes('_')}
+        color={colors.primary}
+        onClick={handleHistoric}>
         {t('ENTRY.HISTORIC')}
       </Button>
     </Container>
