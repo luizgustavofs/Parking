@@ -12,7 +12,21 @@ export const ModalContent = styled.div`
 
   div {
     color: #fff;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
+  }
+
+  .user {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+
+    img:last-child {
+      width: 30px;
+      height: 30px;
+      align-self: center;
+    }
   }
 `;
 
