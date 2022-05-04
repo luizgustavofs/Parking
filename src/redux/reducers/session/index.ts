@@ -14,10 +14,15 @@ const sessionSlice = createSlice({
     changePlate: (state, action: PayloadAction<string>) => {
       state.plate = action.payload;
     },
+    removePlate: state => {
+      state.plate = '';
+      state.currentSection = 'entry';
+    },
   },
 });
 
-export const { changeCurrentSection, changePlate } = sessionSlice.actions;
+export const { changeCurrentSection, changePlate, removePlate } =
+  sessionSlice.actions;
 const sessionReducer = sessionSlice.reducer;
 
 export default sessionReducer;

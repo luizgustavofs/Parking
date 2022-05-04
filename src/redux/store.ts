@@ -8,14 +8,16 @@ import authReducer from './reducers/auth';
 import preferencesReducer from './reducers/preferences';
 import sessionReducer from './reducers/session';
 
+const combinedReducers = combineReducers({
+  auth: authReducer,
+  preferences: preferencesReducer,
+  session: sessionReducer,
+});
+
+export type RootReducer = ReturnType<typeof combinedReducers>;
+
 export const store = configureStore({
-  reducer: persistReducers(
-    combineReducers({
-      auth: authReducer,
-      preferences: preferencesReducer,
-      session: sessionReducer,
-    }),
-  ),
+  reducer: persistReducers(combinedReducers),
 });
 
 const persist = persistStore(store);

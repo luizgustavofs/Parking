@@ -2,7 +2,9 @@ import { Reducer } from 'redux';
 import { persistReducer } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
 
-const persistReducers = (reducers: Reducer<any>) => {
+import { RootReducer } from './store';
+
+const persistReducers = (reducers: Reducer<RootReducer>) => {
   const persistedReducer = persistReducer(
     {
       key: 'Parking',
