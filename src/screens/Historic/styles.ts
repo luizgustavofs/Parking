@@ -36,6 +36,13 @@ export const HistoricDiv = styled.div`
     width: 33px;
     height: 23px;
     margin-right: 12px;
+    cursor: pointer;
+  }
+
+  @media (min-width: 1024px) {
+    width: 40vw;
+    left: 30vw;
+    right: 30vw;
   }
 `;
 
@@ -67,5 +74,12 @@ export const ItemHistoricModal = styled.div`
   img {
     width: 33px;
     height: 23px;
+    cursor: pointer;
+  }
+
+  @media (min-width: 1024px) {
+    width: 40vw;
+    left: 30vw;
+    right: 30vw;
   }
 `;
