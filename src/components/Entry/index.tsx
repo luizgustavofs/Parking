@@ -20,25 +20,36 @@ const Entry: React.FC<EntryProps> = ({ plate, setPlate }) => {
   const [entryState, setEntryState] = useState<EntryState>('default');
   const { t } = useTranslation();
 
+  const checkCanRegister = async () => {
+    setEntryState('loading');
+    const historic = await getVehicleHistory(plate);
+
+    if (historic.length === 0) {
+      return registerPlate();
+    } else {
+      const freeToRegister = historic.find(
+        element => element.left === true && element.paid === true,
+      );
+
+      if (freeToRegister) {
+        registerPlate();
+      } else {
+        toast.error(t('ENTRY.ERROR-NEW-VEHICLE'));
+        setEntryState('default');
+      }
+    }
+  };
+
   const registerPlate = async () => {
     setEntryState('loading');
     const register = await registerVehicleEntry(plate);
-    const historic = await getVehicleHistory(plate);
 
-    const checkIsLeft = historic.find(
-      element => element.left === false && element.paid === false,
-    );
-
-    if (checkIsLeft) {
-      if (register.entered_at) {
-        setEntryState('success');
-        toast.success(t('ENTRY.SUCCESS'));
-        setTimeout(() => setEntryState('default'), 2000);
-      } else {
-        setEntryState('error');
-        toast.error(t('ENTRY.ERROR-NEW-VEHICLE'));
-      }
+    if (register.entered_at) {
+      setEntryState('success');
+      toast.success(t('ENTRY.SUCCESS'));
+      setTimeout(() => setEntryState('default'), 2000);
     } else {
+      setEntryState('default');
       toast.error(t('ENTRY.ERROR-NEW-VEHICLE'));
     }
   };
@@ -77,7 +88,7 @@ const Entry: React.FC<EntryProps> = ({ plate, setPlate }) => {
           <Button
             primary
             disabled={plate === '' || plate.includes('_')}
-            onClick={registerPlate}>
+            onClick={checkCanRegister}>
             {t('ENTRY.CONFIRM')}
           </Button>
         </>
