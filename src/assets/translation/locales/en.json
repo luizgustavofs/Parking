@@ -3,7 +3,6 @@
     "ENTRY": {
       "CONFIRM": "CONFIRM ENTRY",
       "HISTORIC": "VIEW HISTORY",
-      "PAYMENT": "PAYMENT",
       "EXIT": "EXIT",
       "RETURN": "RETURN",
       "REGISTERING": "REGISTERING...",
@@ -11,7 +10,18 @@
       "INPUT": {
         "LABEL": "License plate:",
         "PLACEHOLDER": "AAA-0000"
-      }
+      },
+      "REGISTER": "REGISTERED!",
+      "SUCCESS": "Vehicle has been successfully added.",
+      "ERROR": "Vehicle has been previously added.",
+      "PAYMENT": {
+        "BUTTON": "PAYMENT",
+        "SUCCESS": "Payment made successfully.",
+        "ERROR": "Payment for this vehicle has already been made.",
+        "UNREALIZED": "Vehicle has not yet been registered."
+      },
+      "PAYDOUT": "PAYD OUT!",
+      "ERROR-NEW-VEHICLE": "It is necessary to exit the vehicle for a new entry."
     },
     "LOGIN": {
       "INPUT": {
@@ -28,6 +38,41 @@
     "TAB": {
       "ENTRY": "Entry",
       "EXIT": "Exit"
-    }
+    },
+    "EXIT": {
+      "MODAL": {
+        "CONFIRM": "CONFIRM",
+        "RETURN": "RETURN",
+        "LABEL-CONFIRM": "Confirm the payment of the card below?",
+        "EXIT": "RELEASE EXIT",
+        "LABEL-EXIT": "Can you confirm the vehicle's departure from the plate below?"
+      },
+      "SUCCESS": "Vehicle exit released.",
+      "ERROR": "Unauthorized vehicle departure.",
+      "CHECK": {
+        "ERROR": "Payment has not yet been made.",
+        "SUCCESS": "Output released"
+      },
+      "PAYMENT": {
+        "SUCCESS": "Payment made successfully.",
+        "ERROR": "Payment has already been made."
+      },
+      "RESIDENCE-TIME": "Residence time: "
+    },
+    "PAYMENT": {
+      "ALREADY": {
+        "MADE": "Payment can now be made."
+      }
+    },
+    "LICENSE-PLATE": "LICENSE PLATE",
+    "HISTORIC": {
+      "PARKED": "PARKED",
+      "RELEASED": "RELEASED",
+      "TOTAL-TIME": "TOTAL TIME",
+      "PAID": "PAID"
+    },
+    "TEMPO ATUAL": "CURRENT TIME",
+    "PAGAMENTO": "PAYMENT",
+    "STATUS": "STATUS"
   }
 }

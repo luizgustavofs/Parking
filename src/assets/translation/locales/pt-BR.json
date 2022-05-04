@@ -3,7 +3,6 @@
     "ENTRY": {
       "CONFIRM": "CONFIRMAR ENTRADA",
       "HISTORIC": "VER HISTÓRICO",
-      "PAYMENT": "PAGAMENTO",
       "EXIT": "SAIR",
       "RETURN": "VOLTAR",
       "REGISTERING": "REGISTRANDO...",
@@ -11,7 +10,19 @@
       "INPUT": {
         "LABEL": "Número da placa:",
         "PLACEHOLDER": "AAA-0000"
-      }
+      },
+      "LOADING": "Registrando...",
+      "REGISTER": "REGISTRADO!",
+      "SUCCESS": "Veiculo foi adicionado com sucesso.",
+      "ERROR": "Veiculo ja foi adicionado anteriormente.",
+      "PAYMENT": {
+        "BUTTON": "PAGAMENTO",
+        "SUCCESS": "Pagamento realizado com sucesso.",
+        "ERROR": "O pagamento deste veiculo ja foi realizado.",
+        "UNREALIZED": "Veículo ainda não foi cadastrado."
+      },
+      "PAYDOUT": "PAGO!",
+      "ERROR-NEW-VEHICLE": "É necessário realizar a saída do veiculo para uma nova entrada."
     },
     "LOGIN": {
       "INPUT": {
@@ -28,6 +39,45 @@
     "TAB": {
       "ENTRY": "Entrar",
       "EXIT": "Sair"
-    }
+    },
+    "EXIT": {
+      "MODAL": {
+        "CONFIRM": "CONFIRMAR",
+        "RETURN": "VOLTAR",
+        "LABEL-CONFIRM": "Confima o pagamento da placa abaixo?",
+        "EXIT": "LIBERAR SAÍDA",
+        "LABEL-EXIT": "Confirma a saída do veiculo da placa abaixo?"
+      },
+      "SUCCESS": "Saída do veículo liberada.",
+      "ERROR": "Saída do veículo não autorizada.",
+      "CHECK": {
+        "ERROR": "Pagamento ainda não foi realizado.",
+        "SUCCESS": "Saída liberada."
+      },
+      "ALREADY": {
+        "NEED-PAYMENT": "Para realizar a saída é necessário realizar o pagamento."
+      },
+      "PAYMENT": {
+        "ERROR": "Pagamento ja foi realizado.",
+        "SUCCESS": "Pagamento realizado com sucesso."
+      },
+      "RESIDENCE-TIME": "Tempo de residencia: "
+    },
+    "PAYMENT": {
+      "ALREADY": {
+        "MADE": "O pagamento ja pode ser realizado.",
+        "NEED-VEHICLE": "Para realizar o pagamento é necessá dar entrada com o veículo."
+      }
+    },
+    "LICENSE-PLATE": "PLACA DO CARRO",
+    "HISTORIC": {
+      "PARKED": "ESTACIONADO",
+      "RELEASED": "LIBERADO",
+      "TOTAL-TIME": "TEMPO TOTAL",
+      "PAID": "PAGO"
+    },
+    "TEMPO ATUAL": "TEMPO ATUAL",
+    "PAGAMENTO": "PAGAMENTO",
+    "STATUS": "STATUS"
   }
 }
