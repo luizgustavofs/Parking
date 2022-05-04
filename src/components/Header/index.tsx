@@ -24,13 +24,17 @@ const Header: React.FC<HeaderProps> = () => {
     }
   };
 
+  const handleHeader = () => {
+    window.location.replace(`/register`);
+  };
+
   return (
     <Container>
       <img src="/logo_parking.svg" />
       <div className="web">
         <div />
-        <span>{t('MODAL.ENTRY')}</span>
-        <span>{t('MODAL.EXIT')}</span>
+        <span onClick={handleHeader}>{t('MODAL.ENTRY')}</span>
+        <span onClick={handleHeader}>{t('MODAL.EXIT')}</span>
         <div />
         <img
           onClick={() => changeCurrentLanguage(getNextLanguage())}
