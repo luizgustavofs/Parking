@@ -1,14 +1,15 @@
 /* eslint-disable @next/next/no-img-element */
 /* eslint-disable jsx-a11y/alt-text */
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 import { NextPage } from 'next';
 import { useTranslation } from 'react-i18next';
+import { toast } from 'react-toastify';
 import { useTheme } from 'styled-components';
 
 import Button from '../../components/Button';
 import { setUser } from '../../redux/reducers/auth';
-import { useAppDispatch } from '../../redux/store';
+import { useAppDispatch, useAppSelector } from '../../redux/store';
 import { Container } from './styles';
 
 const Login: NextPage = () => {
@@ -16,14 +17,24 @@ const Login: NextPage = () => {
   const { t } = useTranslation();
   const [username, setUsername] = useState('');
   const dispatch = useAppDispatch();
+  const { user } = useAppSelector(state => state.auth);
 
   const handleLogin = () => {
     if (username !== '') {
       dispatch(setUser({ name: username }));
       window.location.replace('/register');
-      console.log('logado');
+    } else {
+      toast.error(t('LOGIN.ERROR'));
     }
   };
+
+  const handleIsLogged = () => {
+    if (user) {
+      window.location.replace('/register');
+    }
+  };
+
+  useEffect(() => handleIsLogged, []);
 
   return (
     <Container>

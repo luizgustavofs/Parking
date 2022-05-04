@@ -1,6 +1,9 @@
 // import '../styles/globals.css';
+import 'react-toastify/dist/ReactToastify.css';
+
 import '../assets/translation/i18next';
 import type { AppProps } from 'next/app';
+import { useRouter } from 'next/router';
 import { Provider } from 'react-redux';
 import { ToastContainer } from 'react-toastify';
 import { PersistGate } from 'redux-persist/integration/react';
@@ -11,13 +14,15 @@ import { GlobalStyle } from '../styles/global';
 import { ProjectThemeProvider } from '../theme';
 
 function MyApp({ Component, pageProps }: AppProps) {
+  const { asPath } = useRouter();
+
   return (
     <ProjectThemeProvider>
       <Provider store={store}>
         <PersistGate loading={null} persistor={persist}>
-          <GlobalStyle />
-          <Header />
           <ToastContainer />
+          <GlobalStyle />
+          {asPath !== '/' && <Header />}
           <Component {...pageProps} />
         </PersistGate>
       </Provider>

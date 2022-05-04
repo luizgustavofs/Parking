@@ -16,8 +16,9 @@ const HistoricScreen: React.FC = () => {
   const [historicPlate, setHistoricPlate] = useState<Historic[]>([]);
   const [selectedRegister, setSelectedRegister] = useState<Historic>();
 
-  const { plate } = useAppSelector(state => state.session);
-  useEffect(() => console.log(plate), [plate]);
+  const { session, auth } = useAppSelector(state => state);
+  const { plate } = session;
+  const { user } = auth;
 
   const getTime = async (plate: string) => {
     const historic = await getVehicleHistory(plate);
@@ -28,8 +29,23 @@ const HistoricScreen: React.FC = () => {
     window.location.replace(`/register`);
   };
 
+  const checkHasPlate = () => {
+    if (!plate || plate.includes('_')) {
+      window.location.replace('/register');
+    } else {
+      getTime(plate);
+    }
+  };
+
+  const checkHasUser = () => {
+    if (!user) {
+      window.location.replace('/');
+    }
+  };
+
   useEffect(() => {
-    getTime(plate);
+    checkHasUser();
+    checkHasPlate();
   }, []);
 
   return (

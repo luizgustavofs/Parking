@@ -1,8 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 /* eslint-disable jsx-a11y/alt-text */
-import 'react-toastify/dist/ReactToastify.css';
-
-import React from 'react';
+import React, { useEffect } from 'react';
 
 import { useTranslation } from 'react-i18next';
 
@@ -17,10 +15,21 @@ import { useAppDispatch, useAppSelector } from '../../redux/store';
 import { Container, TabContainer } from './styles';
 
 const RegisterScreen: React.FC = () => {
-  const { plate, currentSection } = useAppSelector(state => state.session);
+  const { session, auth } = useAppSelector(state => state);
+  const { plate, currentSection } = session;
+  const { user } = auth;
+
   const dispatch = useAppDispatch();
 
   const { t } = useTranslation();
+
+  const checkHasUser = () => {
+    if (!user) {
+      window.location.replace('/');
+    }
+  };
+
+  useEffect(() => checkHasUser(), []);
 
   return (
     <>
