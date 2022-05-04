@@ -22,8 +22,9 @@ const getStyle = ({
   if (secondary) {
     return `
     border-style: solid; border-width: 2px; border-color: ${
-      disabled ? theme.colors.neutral._70 : color
-    }; h4 {
+      disabled ? theme.colors.neutral._80 : color
+    }; 
+    h4 {
       color: ${disabled ? theme.colors.neutral._80 : color}
     }; 
       ${disabled && `cursor: auto;`}
@@ -31,6 +32,7 @@ const getStyle = ({
   }
   if (withOutBG) {
     return ` 
+    background: #fff;
     h4 {
       color: ${disabled ? theme.colors.neutral._80 : color}
     };
@@ -39,10 +41,11 @@ const getStyle = ({
   }
 };
 
-export const Container = styled.div<ButtonBackgroundProps>`
+export const Container = styled.button<ButtonBackgroundProps>`
   display: flex;
   width: 100%;
   height: 4.188rem;
+  border: none;
   border-radius: 4px;
 
   cursor: pointer;
