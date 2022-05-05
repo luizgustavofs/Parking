@@ -6,6 +6,7 @@ export interface ButtonBackgroundProps {
   secondary?: boolean;
   disabled?: boolean;
   withOutBG?: boolean;
+  testID?: string;
 }
 
 export interface getStyleProps extends ButtonBackgroundProps {

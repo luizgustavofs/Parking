@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button should render correctly with variant primary 1`] = `
+<button
+  className="sc-bczRLJ bIDAMy"
+  color="#28DD91"
+>
+  <h4>
+    test
+  </h4>
+</button>
+`;
+
+exports[`Button should render correctly with variant secondary 1`] = `
+<button
+  className="sc-bczRLJ jLgYQE"
+  color="#28DD91"
+>
+  <h4>
+    test
+  </h4>
+</button>
+`;
