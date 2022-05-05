@@ -1,6 +1,8 @@
 {
   "cSpell.language": "en,pt_BR",
-  "cSpell.words": [],
+  "cSpell.words": [
+    "testid"
+  ],
   "i18n-ally.dirStructure": "auto",
   "i18n-ally.sourceLanguage": "pt-BR",
   "i18n-ally.displayLanguage": "pt-BR",
