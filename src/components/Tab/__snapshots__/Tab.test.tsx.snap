@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tab should render correctly with variants 1`] = `
+<div
+  className="sc-bczRLJ brxjCC"
+  onClick={[Function]}
+>
+  <h3 />
+</div>
+`;
