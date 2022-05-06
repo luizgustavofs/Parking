@@ -41,11 +41,16 @@ const Login: NextPage = () => {
       <div>
         <img src="logo_parking.svg" />
         <input
+          data-testid="username-input"
           placeholder={t('LOGIN.INPUT.USERNAME')}
           value={username}
           onChange={e => setUsername(e.target.value)}
         />
-        <Button primary color={colors.tertiary} onClick={handleLogin}>
+        <Button
+          testID="login-test-button"
+          primary
+          color={colors.tertiary}
+          onClick={handleLogin}>
           {t('LOGIN.BUTTON')}
         </Button>
       </div>

@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HistoricScreen should render correctly 1`] = `
+<div
+  className="sc-gsnTZi blRkZb"
+>
+  <div>
+    <img
+      src="logo_parking.svg"
+    />
+    <input
+      data-testid="username-input"
+      onChange={[Function]}
+      placeholder="LOGIN.INPUT.USERNAME"
+      value=""
+    />
+    <button
+      className="sc-bczRLJ bIDAMy"
+      color="#28DD91"
+      data-testid="login-test-button"
+      onClick={[Function]}
+    >
+      <h4>
+        LOGIN.BUTTON
+      </h4>
+    </button>
+  </div>
+</div>
+`;
