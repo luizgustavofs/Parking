@@ -7,4 +7,5 @@ export interface InputProps extends InputPlaceholderProps {
   label: string;
   onChange: (value: string) => void;
   value: string;
+  testID?: string;
 }

@@ -12,6 +12,7 @@ const Input: React.FC<InputProps> = ({
   color,
   value,
   onChange,
+  testID,
 }) => {
   const { colors } = useTheme();
 
@@ -19,6 +20,7 @@ const Input: React.FC<InputProps> = ({
     <Container color={color || colors.neutral._80}>
       <h3>{label}</h3>
       <InputMask
+        data-testid={testID || 'input-test'}
         color={color}
         mask="aaa-9999"
         placeholder={placeholderText}
