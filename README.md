@@ -1,34 +1,49 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Parking
 
-## Getting Started
+<img width="654" alt="parking1" src="https://user-images.githubusercontent.com/64445221/167202994-7080ff11-3ed0-4543-bf73-7326161c734e.png">
+<img width="911" alt="parking2" src="https://user-images.githubusercontent.com/64445221/167203025-092bf4fc-96e1-4fa5-a45b-31768fe82847.png">
 
-First, run the development server:
 
-```bash
-npm run dev
-# or
-yarn dev
+# About the project
+Este projeto é um site focado em realizar o controle de um estacionamento. Onde é preciso registrar uma placa, realizar o pagamento e saída dela. Você também poderá acompanhar todo o historico dela com o tempo que permaneceu estacionada e também se ja foi realizado o pagamento.
+
+Você pode acessá-lo através deste link: https://parking-next.vercel.app/
+
+## 🛠️ Features
+
+-   [x] Entrar com seu usuário.
+-   [x] Trocar o idioma de todo o site.
+-   [x] Registrar a entrada de uma placa.
+-   [x] Registrar o pagamento de uma placa.
+-   [x] Registrar a saída de uma placa.
+-   [x] Verificar o historico de uma placa específica.
+-   [x] Realizar o logou do usuário.
+
+## ✨ Technologies
+
+-   [x] NextJs
+-   [x] TypeScript
+-   [x] Styled Components
+-   [x] i18next Internationalization
+-   [x] Redux
+-   [x] Axios
+-   [x] Jest
+
+```
+git clone git@github.com:luizgustavofs/Parking.git
+$ cd Parking
+$ yarn
+
+$ yarn dev
+
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## More
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+Este projeto foi criado para o teste de uma empresa.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+-   [ ] Adicionado usuario para login.
+-   [ ] Testes Unitários.
+-   [ ] Adicionado Toastfy para os erros e sucessos durante a utilização do site.
+-   [ ] Adiocionado loading animation durante as ações do usuário.
+-   [ ] Realizado a responsividade do site com mobile first.
