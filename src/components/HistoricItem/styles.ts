@@ -1,9 +1,12 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
+  background-color: red;
   display: flex;
   min-height: 80px;
-  padding: 16px 40px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
   width: 100%;
   cursor: pointer;
 
@@ -32,6 +35,6 @@ export const Time = styled.div`
 export const Payment = styled.div`
   display: flex;
   flex: 1;
-
   flex-direction: column;
+  text-align: center;
 `;

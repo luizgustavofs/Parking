@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HistoricItem should render correctly with variants 1`] = `
+<div
+  className="sc-bczRLJ fddqeL"
+  onClick={[Function]}
+>
+  <div
+    className="sc-gsnTZi jViTcG"
+  >
+    <h5>
+      TEMPO ATUAL
+    </h5>
+    <h2>
+      test
+    </h2>
+  </div>
+  <div
+    className="sc-dkzDqf cjObAl"
+  >
+    <h5>
+      PAGAMENTO
+    </h5>
+    <h2>
+      true
+    </h2>
+  </div>
+</div>
+`;
