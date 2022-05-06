@@ -49,7 +49,7 @@ export const HistoricDiv = styled.div`
 export const ItemHistoricModal = styled.div`
   display: flex;
   position: absolute;
-  z-index: 2;
+  z-index: 1;
   background-color: #fff;
   flex-direction: column;
   width: 95vw;

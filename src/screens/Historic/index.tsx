@@ -77,7 +77,7 @@ const HistoricScreen: React.FC = () => {
           <h1>{selectedRegister?.plate}</h1>
           <h3>{t('STATUS')}</h3>
           <h2>
-            {selectedRegister?.paid || selectedRegister?.left === false
+            {selectedRegister?.left === false
               ? t('HISTORIC.PARKED')
               : t('HISTORIC.RELEASED')}
           </h2>
