@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HistoricScreen should render correctly 1`] = `
+<div
+  className="sc-hKMtZM bbAbin"
+>
+  <div
+    className="sc-eCYdqJ cTuguu"
+  >
+    <div>
+      <img
+        onClick={[Function]}
+        src="/arrow_left.svg"
+      />
+      <h1 />
+    </div>
+  </div>
+</div>
+`;
