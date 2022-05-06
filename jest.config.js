@@ -6,15 +6,26 @@ const createJestConfig = nextJest({
 
 const customJestConfig = {
   collectCoverageFrom: [
-    '**/*.{js,jsx,ts,tsx}',
+    'src/**/*.{js,jsx,ts,tsx}',
     '!**/*.d.ts',
+    '!**/types.ts',
     '!**/node_modules/**',
   ],
+  collectCoverage: true,
+  coverageDirectory: './coverage/',
+  coveragePathIgnorePatterns: [
+    '/lib/',
+    '/coverage/',
+    '/node_modules/',
+    '/example/',
+    '/.next/',
+  ],
+  coverageReporters: ['html', 'json', 'text-summary'],
   moduleNameMapper: {
     '^.+\\.module\\.(css|sass|scss)$': 'identity-obj-proxy',
     '^.+\\.(css|sass|scss)$': '<rootDir>/__mocks__/styleMock.js',
     '^.+\\.(png|jpg|jpeg|gif|webp|avif|ico|bmp|svg)$/i': `<rootDir>/__mocks__/fileMock.js`,
-    '^@/components/(.*)$': '<rootDir>/components/$1',
+    '^@/components/(.*)$': '<rootDir>/src/components/$1',
   },
   testPathIgnorePatterns: ['<rootDir>/node_modules/', '<rootDir>/.next/'],
   testEnvironment: 'jsdom',
