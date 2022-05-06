@@ -66,7 +66,7 @@
     },
     "PAYMENT": {
       "ALREADY": {
-        "MADE": "O pagamento ja pode ser realizado.",
+        "MADE": "A saida ja pode ser realizado.",
         "NEED-VEHICLE": "Para realizar o pagamento é necessá dar entrada com o veículo."
       }
     },
