@@ -38,7 +38,7 @@ const Exit: React.FC<ExitProps> = ({ plate, setPlate }) => {
         element => element.left === false && element.paid === true,
       );
       if (hasElementPaid) {
-        toast.error(t('PAYMENT.ALREADY.MADE'));
+        toast.success(t('PAYMENT.ALREADY.MADE'));
       } else {
         toast.error(t('PAYMENT.ALREADY.NEED-VEHICLE'));
       }
@@ -98,7 +98,6 @@ const Exit: React.FC<ExitProps> = ({ plate, setPlate }) => {
 
   const handleHistoric = () => {
     window.location.replace(`/historic?plate=${plate}`);
-    console.log('Entrou no historico');
   };
 
   return (
@@ -136,6 +135,7 @@ const Exit: React.FC<ExitProps> = ({ plate, setPlate }) => {
                   {residenceTime}
                 </h3>
                 <Button
+                  testID="button-payment-or-exit-success"
                   primary
                   color={colors.quaternary}
                   onClick={
@@ -160,6 +160,7 @@ const Exit: React.FC<ExitProps> = ({ plate, setPlate }) => {
       )}
 
       <Input
+        testID="input-plate"
         label={t('ENTRY.INPUT.LABEL')}
         placeholderText={t('ENTRY.INPUT.PLACEHOLDER')}
         value={plate}
@@ -170,6 +171,7 @@ const Exit: React.FC<ExitProps> = ({ plate, setPlate }) => {
         color={exitState === 'error' ? colors.error : colors.default}
       />
       <Button
+        testID="button-confirm-payment"
         primary
         disabled={plate === '' || plate.includes('_')}
         color={colors.quaternary}
@@ -177,6 +179,7 @@ const Exit: React.FC<ExitProps> = ({ plate, setPlate }) => {
         {t('ENTRY.PAYMENT.BUTTON')}
       </Button>
       <Button
+        testID="button-confirm-left"
         secondary
         disabled={plate === '' || plate.includes('_')}
         color={colors.quaternary}
@@ -184,6 +187,7 @@ const Exit: React.FC<ExitProps> = ({ plate, setPlate }) => {
         {t('ENTRY.EXIT')}
       </Button>
       <Button
+        testID="button-open-historic"
         withOutBG
         disabled={plate === '' || plate.includes('_')}
         color={colors.primary}

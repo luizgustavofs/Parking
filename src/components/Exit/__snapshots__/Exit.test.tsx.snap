@@ -1,0 +1,60 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Exit should render correctly with variants plate and setPlate 1`] = `
+<div
+  className="sc-dkzDqf ckliYV"
+>
+  <div
+    className="sc-gsnTZi bYaekj"
+    color="#000000"
+  >
+    <h3>
+      ENTRY.INPUT.LABEL
+    </h3>
+    <input
+      color="#000000"
+      data-testid="input-plate"
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      onMouseDown={[Function]}
+      onPaste={[Function]}
+      placeholder="ENTRY.INPUT.PLACEHOLDER"
+      value="AAA-0000"
+    />
+  </div>
+  <button
+    className="sc-bczRLJ aoxZq"
+    color="#A769B2"
+    data-testid="button-confirm-payment"
+    disabled={false}
+    onClick={[Function]}
+  >
+    <h4>
+      ENTRY.PAYMENT.BUTTON
+    </h4>
+  </button>
+  <button
+    className="sc-bczRLJ htJogj"
+    color="#A769B2"
+    data-testid="button-confirm-left"
+    disabled={false}
+    onClick={[Function]}
+  >
+    <h4>
+      ENTRY.EXIT
+    </h4>
+  </button>
+  <button
+    className="sc-bczRLJ kGFRLF"
+    color="#4DD0E1"
+    data-testid="button-open-historic"
+    disabled={false}
+    onClick={[Function]}
+  >
+    <h4>
+      ENTRY.HISTORIC
+    </h4>
+  </button>
+</div>
+`;
