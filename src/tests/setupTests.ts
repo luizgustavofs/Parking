@@ -27,8 +27,10 @@ jest.mock('react-toastify', () => {
 
 export const replaceMock = jest.fn();
 
-delete window.location;
-window.location = { replace: replaceMock };
+// delete window.location;
+// window.location = { reload: replaceMock };
+delete (window as Partial<Window>).location;
+window.location = { ...window.location, reload: jest.fn() };
 
 afterEach(() => {
   replaceMock.mockClear();
