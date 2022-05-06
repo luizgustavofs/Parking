@@ -1,0 +1,62 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RegisterScreen should render correctly 1`] = `
+<div
+  className="sc-ftvSup bXdBcV"
+>
+  <div
+    className="sc-papXJ dhDoTa"
+  >
+    <div
+      className="sc-iBkjds bozAAl"
+      onClick={[Function]}
+    >
+      <h3>
+        TAB.ENTRY
+      </h3>
+    </div>
+    <div
+      className="sc-iBkjds kNPk"
+      onClick={[Function]}
+    >
+      <h3>
+        TAB.EXIT
+      </h3>
+    </div>
+  </div>
+  <div
+    className="sc-dkzDqf bznBgJ"
+  >
+    <div
+      className="sc-gsnTZi bYaekj"
+      color="#000000"
+    >
+      <h3>
+        ENTRY.INPUT.LABEL
+      </h3>
+      <input
+        color="#000000"
+        data-testid="plate-input"
+        onBlur={[Function]}
+        onChange={[Function]}
+        onFocus={[Function]}
+        onMouseDown={[Function]}
+        onPaste={[Function]}
+        placeholder="ENTRY.INPUT.PLACEHOLDER"
+        value=""
+      />
+    </div>
+    <button
+      className="sc-bczRLJ LwrQA"
+      color="#28DD91"
+      data-testid="button-confirm"
+      disabled={true}
+      onClick={[Function]}
+    >
+      <h4>
+        ENTRY.CONFIRM
+      </h4>
+    </button>
+  </div>
+</div>
+`;

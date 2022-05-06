@@ -36,11 +36,13 @@ const RegisterScreen: React.FC = () => {
       <Container>
         <TabContainer>
           <Tab
+            data-testid="entry-test"
             label={t('TAB.ENTRY')}
             active={currentSection === 'entry'}
             onClick={() => dispatch(changeCurrentSection('entry'))}
           />
           <Tab
+            data-testid="exit-test"
             label={t('TAB.EXIT')}
             active={currentSection === 'exit'}
             onClick={() => dispatch(changeCurrentSection('exit'))}
