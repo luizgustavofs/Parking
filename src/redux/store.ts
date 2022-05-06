@@ -18,6 +18,10 @@ export type RootReducer = ReturnType<typeof combinedReducers>;
 
 export const store = configureStore({
   reducer: persistReducers(combinedReducers),
+  middleware: getDefaultMiddleware =>
+    getDefaultMiddleware({
+      serializableCheck: false,
+    }),
 });
 
 const persist = persistStore(store);
