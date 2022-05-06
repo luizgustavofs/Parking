@@ -24,7 +24,7 @@ const Entry: React.FC<EntryProps> = ({ plate, setPlate }) => {
     setEntryState('loading');
     const historic = await getVehicleHistory(plate);
 
-    if (historic.length === 0) {
+    if (historic === []) {
       return registerPlate();
     } else {
       const notCompletedRegister = historic.find(
