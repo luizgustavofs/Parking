@@ -27,11 +27,11 @@ const Entry: React.FC<EntryProps> = ({ plate, setPlate }) => {
     if (historic.length === 0) {
       return registerPlate();
     } else {
-      const freeToRegister = historic.find(
-        element => element.left === true && element.paid === true,
+      const notCompletedRegister = historic.find(
+        element => element.left === false || element.paid === false,
       );
 
-      if (freeToRegister) {
+      if (!notCompletedRegister) {
         registerPlate();
       } else {
         toast.error(t('ENTRY.ERROR-NEW-VEHICLE'));
@@ -76,6 +76,7 @@ const Entry: React.FC<EntryProps> = ({ plate, setPlate }) => {
       {(entryState === 'default' || entryState === 'error') && (
         <>
           <Input
+            testID="plate-input"
             label={t('ENTRY.INPUT.LABEL')}
             placeholderText={t('ENTRY.INPUT.PLACEHOLDER')}
             value={plate}
@@ -86,6 +87,7 @@ const Entry: React.FC<EntryProps> = ({ plate, setPlate }) => {
             color={entryState === 'error' ? colors.error : colors.default}
           />
           <Button
+            testID="button-confirm"
             primary
             disabled={plate === '' || plate.includes('_')}
             onClick={checkCanRegister}>

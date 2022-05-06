@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Entry should render correctly with variants plate and setPlate 1`] = `
+<div
+  className="sc-dkzDqf bznBgJ"
+>
+  <div
+    className="sc-gsnTZi bYaekj"
+    color="#000000"
+  >
+    <h3>
+      ENTRY.INPUT.LABEL
+    </h3>
+    <input
+      color="#000000"
+      data-testid="plate-input"
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      onMouseDown={[Function]}
+      onPaste={[Function]}
+      placeholder="ENTRY.INPUT.PLACEHOLDER"
+      value="AAA-0000"
+    />
+  </div>
+  <button
+    className="sc-bczRLJ DNMyx"
+    color="#28DD91"
+    data-testid="button-confirm"
+    disabled={false}
+    onClick={[Function]}
+  >
+    <h4>
+      ENTRY.CONFIRM
+    </h4>
+  </button>
+</div>
+`;
