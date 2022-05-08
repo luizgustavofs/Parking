@@ -22,9 +22,15 @@ const Entry: React.FC<EntryProps> = ({ plate, setPlate }) => {
 
   const checkCanRegister = async () => {
     setEntryState('loading');
-    const historic = await getVehicleHistory(plate);
+    const historic = await getVehicleHistory(plate).catch(error => {
+      toast.error(t('ERROR.API_ERROR'));
+      console.log(error);
+      setEntryState('default');
+    });
 
-    if (historic === []) {
+    if (!historic) return;
+
+    if (historic?.length === 0) {
       return registerPlate();
     } else {
       const notCompletedRegister = historic.find(
@@ -42,7 +48,13 @@ const Entry: React.FC<EntryProps> = ({ plate, setPlate }) => {
 
   const registerPlate = async () => {
     setEntryState('loading');
-    const register = await registerVehicleEntry(plate);
+    const register = await registerVehicleEntry(plate).catch(error => {
+      toast.error(t('ERROR.API_ERROR'));
+      console.log(error);
+      setEntryState('default');
+    });
+
+    if (!register) return;
 
     if (register.entered_at) {
       setEntryState('success');

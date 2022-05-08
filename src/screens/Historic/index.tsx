@@ -3,6 +3,7 @@
 import React, { useEffect, useState } from 'react';
 
 import { useTranslation } from 'react-i18next';
+import { toast } from 'react-toastify';
 
 import HistoricItem from '../../components/HistoricItem';
 import { useAppSelector } from '../../redux/store';
@@ -21,7 +22,13 @@ const HistoricScreen: React.FC = () => {
   const { user } = auth;
 
   const getTime = async (plate: string) => {
-    const historic = await getVehicleHistory(plate);
+    const historic = await getVehicleHistory(plate).catch(error => {
+      toast.error(t('ERROR.API_ERROR'));
+      console.log(error);
+    });
+
+    if (!historic) return;
+
     setHistoricPlate(historic.reverse());
   };
 

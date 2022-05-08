@@ -25,7 +25,13 @@ const Exit: React.FC<ExitProps> = ({ plate, setPlate }) => {
 
   const checkCanPay = async () => {
     setExitState('loading');
-    const historic = await getVehicleHistory(plate);
+    const historic = await getVehicleHistory(plate).catch(error => {
+      toast.error(t('ERROR.API_ERROR'));
+      console.log(error);
+      setExitState('default');
+    });
+
+    if (!historic) return;
 
     const freeToPay = historic.find(element => element.paid === false);
 
@@ -47,7 +53,13 @@ const Exit: React.FC<ExitProps> = ({ plate, setPlate }) => {
 
   const checkCanExit = async () => {
     setExitState('loading');
-    const historic = await getVehicleHistory(plate);
+    const historic = await getVehicleHistory(plate).catch(error => {
+      toast.error(t('ERROR.API_ERROR'));
+      console.log(error);
+      setExitState('default');
+    });
+
+    if (!historic) return;
 
     const freeToExit = historic.find(
       element => element.paid === true && element.left === false,
@@ -70,7 +82,13 @@ const Exit: React.FC<ExitProps> = ({ plate, setPlate }) => {
 
   const registerPaymentPlate = async () => {
     setExitState('loading');
-    const registerPayment = await registerVehiclePayment(plate);
+    const registerPayment = await registerVehiclePayment(plate).catch(error => {
+      toast.error(t('ERROR.API_ERROR'));
+      console.log(error);
+      setExitState('default');
+    });
+
+    if (!registerPayment) return;
 
     if (registerPayment) {
       setExitState('success');
@@ -84,7 +102,13 @@ const Exit: React.FC<ExitProps> = ({ plate, setPlate }) => {
 
   const registerExitPlate = async () => {
     setExitState('loading');
-    const registerPayment = await registerVehicleExit(plate);
+    const registerPayment = await registerVehicleExit(plate).catch(error => {
+      toast.error(t('ERROR.API_ERROR'));
+      console.log(error);
+      setExitState('default');
+    });
+
+    if (!registerPayment) return;
 
     if (registerPayment) {
       setExitState('success');

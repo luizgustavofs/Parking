@@ -82,6 +82,9 @@
       "CONFIRM-LOGOUT-YES": "Yes",
       "CONFIRM-LOGOUT-NO": "No",
       "LOG-IN": "You would need to add a user to sign in."
+    },
+    "ERROR": {
+      "API_ERROR": "We had a problem with the API please try again in few minutes."
     }
   },
   "Usuario:": "User: "
